@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Share | FilRecipes</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #000; /* Set the global background color to black */
+            color: #fff; /* Default text color is white */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #000;
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ddd;
+        }
+
+        /* Centered Image with overlay and blur effect */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            background-image: url('blurred.jpg'); 
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .hero-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            filter: blur(8px); 
+            z-index: -1; 
+        }
+
+        /* Hero content styles with black background behind text */
+        .hero-content {
+            z-index: 1;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #fff; 
+            background-color: rgba(0, 0, 0, 0.6); /* Black background with transparency */
+            padding: 20px 40px;
+            border-radius: 10px;
+        }
+
+        .hero-content h2 {
+            font-size: 50px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 24px;
+            font-weight: normal;
+        }
+
+        /* Recipe Categories Section */
+        .category-section {
+            color: #fff; /* White text color for categories */
+        }
+
+        .category-section .col-md-6 {
+            background-color: transparent; 
+        }
+
+        .category-section img {
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); 
+            width: 100%; /* Make images responsive */
+            height: 300px; 
+            object-fit: cover; 
+        }
+
+        /* Text for Pancit Canton and Pork Sisig titles will be black */
+        .category-section h3 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000; /* Black color for the category titles */
+        }
+
+        .category-section p {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 15px;
+            color: #fff; /* White color for the category description */
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Recipe Share</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> <!-- Link to Home -->
+                    <li class="nav-item"><a class="nav-link" href="categories.html">Recipe Categories</a></li> <!-- Link to Recipe Categories -->
+                    <li class="nav-item"><a class="nav-link" href="submit.html">Submit a Recipe</a></li> <!-- Link to Submit Recipe -->
+                    <li class="nav-item"><a class="nav-link" href="pancit-canton.html">Pancit Canton</a></li> <!-- Link to Pancit Canton -->
+                    <li class="nav-item"><a class="nav-link" href="pork-sisig.html">Pork Sisig</a></li> <!-- Link to Pork Sisig -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Filipino dishes image -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h2>Welcome to FilRecipes!</h2>
+            <p>Learn and share your favorite Filipino recipes.</p>
+        </div>
+    </div>
+
+    <!-- Recipe Categories Section -->
+    <section class="container py-5 category-section">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="text-center mb-4">Pancit Canton</h3>
+                <img src="pancit.jpg" class="img-fluid" alt="Pancit Canton">
+                <p class="text-center mt-3">A classic Filipino stir-fried noodle dish, perfect for celebrations like Christmas and Birthdays.</p>
+            </div>
+            <div class="col-md-6">
+                <h3 class="text-center mb-4">Pork Sisig</h3>
+                <img src="sisig.jpg" class="img-fluid" alt="Pork Sisig">
+                <p class="text-center mt-3">A sizzling, smoky, and spicy dish that brings a mix of delicious flavours.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 FilRecipes </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

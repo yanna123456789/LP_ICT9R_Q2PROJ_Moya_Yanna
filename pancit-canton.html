@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancit Canton | FilRecipes</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #000; /* Set the global background color to black */
+            color: #fff; /* Default text color is white */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #000;
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ddd;
+        }
+
+        /* Hero Section with Filipino dishes image */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            background-image: url('blurred.jpg'); 
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .hero-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            filter: blur(8px); 
+            z-index: -1; /* Send the blurred background behind the content */
+        }
+
+        /* Hero content styles with black background behind text */
+        .hero-content {
+            z-index: 1;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #fff; /* Text color remains white */
+            background-color: rgba(0, 0, 0, 0.6); /* Black background with transparency */
+            padding: 20px 40px;
+            border-radius: 10px;
+        }
+
+        .hero-content h2 {
+            font-size: 50px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 24px;
+            font-weight: normal;
+        }
+
+        /* Recipe content section */
+        .recipe-content {
+            padding: 50px 0;
+        }
+
+        .recipe-content h3 {
+            font-size: 36px;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .recipe-content img {
+            width: 100%; /* Make the image responsive */
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin: 30px auto;
+        }
+
+        /* Tables container */
+        .tables-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .ingredients-table, .instructions-table {
+            width: 48%; /* Set both tables to take 48% width */
+            background-color: #333; /* Dark gray background for the tables */
+            border-radius: 10px;
+        }
+
+        .ingredients-table th, .ingredients-table td,
+        .instructions-table th, .instructions-table td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .ingredients-table th, .instructions-table th {
+            background-color: #555; /* Darker gray for table headers */
+        }
+
+        .ingredients-table td, .instructions-table td {
+            background-color: #444; 
+            color: #fff; 
+            font-weight: bold; 
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        /* Style to make the image stretch across the width of the tables */
+        .image-container {
+            width: 100%; /* Ensure container spans the full width */
+            display: flex;
+            justify-content: center; 
+        }
+
+        .image-container img {
+            width: 96%; /* Make the image take up the full width minus a small margin */
+            max-width: 100%; /* Ensure it doesn’t exceed the container’s width */
+            height: auto; /* Keep the aspect ratio intact */
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Recipe Share</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="categories.html">Recipe Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="submit.html">Submit a Recipe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pancit-canton.html">Pancit Canton</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h2>Pancit Canton</h2>
+            <p>A classic Filipino stir-fried noodle dish, perfect for celebrations like Christmas and Birthdays.</p>
+        </div>
+    </div>
+
+    <!-- Recipe Content Section -->
+    <div class="recipe-content container">
+        <div class="tables-container">
+            <!-- Ingredients Table -->
+            <div class="ingredients-table">
+                <h3>Ingredients</h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Ingredient</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pancit noodles</td>
+                            <td>500g</td>
+                        </tr>
+                        <tr>
+                            <td>Chicken breast</td>
+                            <td>200g</td>
+                        </tr>
+                        <tr>
+                            <td>Pork (optional)</td>
+                            <td>100g</td>
+                        </tr>
+                        <tr>
+                            <td>Carrots (julienned)</td>
+                            <td>1 medium</td>
+                        </tr>
+                        <tr>
+                            <td>Cabbage</td>
+                            <td>1/2 head</td>
+                        </tr>
+                        <tr>
+                            <td>Garlic (minced)</td>
+                            <td>4 cloves</td>
+                        </tr>
+                        <tr>
+                            <td>Onion (chopped)</td>
+                            <td>1 medium</td>
+                        </tr>
+                        <tr>
+                            <td>Soy sauce</td>
+                            <td>3 tbsp</td>
+                        </tr>
+                        <tr>
+                            <td>Cooking oil</td>
+                            <td>2 tbsp</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Instructions Table -->
+            <div class="instructions-table">
+                <h3>Instructions</h3>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td><b>1.</b> Cook the pancit noodles according to package instructions.</td>
+                        </tr>
+                        <tr>
+                            <td><b>2.</b> In a large pan, sauté garlic and onion until fragrant.</td>
+                        </tr>
+                        <tr>
+                            <td><b>3.</b> Add the pork and chicken and cook until browned.</td>
+                        </tr>
+                        <tr>
+                            <td><b>4.</b> Add the carrots and cabbage, and stir-fry for a few minutes.</td>
+                        </tr>
+                        <tr>
+                            <td><b>5.</b> Add the soy sauce and cook until vegetables are tender and well mixed.</td>
+                        </tr>
+                        <tr>
+                            <td><b>6.</b> Toss in the cooked pancit noodles, mix well, and adjust seasoning as needed.</td>
+                        </tr>
+                        <tr>
+                            <td><b>7.</b> Find a good plating for this dish.</td>
+                        </tr>
+                        <tr>
+                            <td><b>8.</b> Get a number of Calamansi and squeeze gently around the dish.</td>
+                        </tr>
+                        <tr>
+                            <td><b>9.</b> Let it sit for a few minutes.</td>
+                        </tr>
+                        <tr>
+                            <td><b>10.</b> Serve hot and enjoy!</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Image below the tables -->
+        <div class="image-container">
+            <img src="canton.avif" alt="Pancit Canton">
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 FilRecipes</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
